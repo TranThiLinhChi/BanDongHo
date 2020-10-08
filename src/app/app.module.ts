@@ -10,7 +10,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { ProductComponent } from './product/product.component';
 //import { SlideComponent } from './home/slide/slide.component';
 import { ListItemComponent } from './product/list-item/list-item.component';
-//import { DetailComponent } from './product/detail/detail.component';
+import { DetailComponent } from './product/detail/detail.component';
 //import { CartComponent } from './product/cart/cart.component';
 import { NotFoundComponent } from './shared/not-found/not-found.component';
 
@@ -25,8 +25,8 @@ import { NotFoundComponent } from './shared/not-found/not-found.component';
     ProductComponent,
     //SlideComponent,
     ListItemComponent,
-    //DetailComponent,
-    //CartComponent,
+    DetailComponent,
+   // CartComponent,
     NotFoundComponent
   ],
   imports: [
