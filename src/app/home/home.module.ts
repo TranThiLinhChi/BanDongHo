@@ -1,21 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home.component';
-import { SlideComponent } from './slide/slide.component';
+import { RouterModule, Routes } from '@angular/router';
+import { SharedModule } from '../shared/shared.module';
 
 const routes: Routes = [
-  { path: '',component: HomeComponent }
-]
+  {
+    path: '',
+    component: HomeComponent,
+  }, 
+];
 
 
 @NgModule({
   declarations: [
-    SlideComponent,
+    HomeComponent,
   ],
   imports: [
     CommonModule,
-    RouterModule.forRoot(routes)
+    SharedModule,
+    RouterModule.forChild(routes),
   ]
 })
 export class HomeModule { }
