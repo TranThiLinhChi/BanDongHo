@@ -5,20 +5,20 @@ import {ListItemComponent} from './list-item/list-item.component';
 //import {CartComponent} from './Cart/cart.component';
 import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
-//import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
-  {path: 'list-item', component: ListItemComponent},
-  {path: 'detail', component: DetailComponent},
+  {path: 'list-item/:id', component: ListItemComponent},
+  {path: 'detail/:id', component: DetailComponent},
  // {path: 'cart', component: CartComponent},
-]
+];
 
 @NgModule({
-  declarations: [],
+  declarations: [ListItemComponent,DetailComponent],
   imports: [
     CommonModule,
     SharedModule,
-   // FormsModule,ReactiveFormsModule,
+    FormsModule,ReactiveFormsModule,
     RouterModule.forChild(routes)
   ]
 })
