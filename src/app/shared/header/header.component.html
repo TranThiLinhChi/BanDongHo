@@ -38,13 +38,8 @@
                                 <div class="search-select-box">
                                     <select class="nice-select">
                                         <optgroup label=" Watch">
-                                            <option value="volvo">Tất cả</option>
-                                            <option value="saab">Đồng Hồ Nam</option>
-                                            <option value="saab">Đồng Hồ Nữ</option>
-                                            <option value="saab">Đồng Hồ Đôi</option>
-                                        </optgroup>
-                                        <optgroup label="Fashion">
-                                            <option value="mercedes">Smart Watch</option>
+                                            <option value="volvo">Sản Phẩm</option>
+                                            <option value="saab"*ngFor="let ca of categories">{{ca.name}}</option>
                                         </optgroup>
                                     </select>
                                 </div>
@@ -107,8 +102,8 @@
                                 </li>
                                 <li class="mini-cart-btns">
                                     <div class="cart-btns">
-                                        <a href="cart.html">View cart</a>
-                                        <a href="checkout.html">Checkout</a>
+                                        <a routerLink="/customer/cart">Xem giỏ hàng</a>
+                                        <a href="checkout.html">Thanh toán</a>
                                     </div>
                                 </li>
                             </ul>
@@ -130,7 +125,7 @@
                         <!--  Start Mainmenu Nav-->
                         <nav class="main-navigation text-center">
                             <ul>
-                                <li class="active"><a href="index.html">Trang Chủ<i class="fa fa-angle-down"></i></a>
+                                <li class="active"><a href="index.html">Trang Chủ</a>
                                     <!-- <ul class="sub-menu">
                                         <li><a href="index.html">Home Page 1</a></li>
                                         <li><a href="index-2.html">Home Page 2</a></li>

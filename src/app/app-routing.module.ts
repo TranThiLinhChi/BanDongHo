@@ -6,14 +6,20 @@ import { combineAll } from 'rxjs-compat/operator/combineAll';
 import {NotFoundComponent} from './shared/not-found/not-found.component';
 
 const routes: Routes = [
-     { path: '', component: HomeComponent },
-     { path: '', redirectTo: 'home', pathMatch: 'full' },
+      { path: '', component: HomeComponent },
+      { path: '', redirectTo: 'home', pathMatch: 'full' },
     //{path: 'cart', component: CartComponent},
-     {path: 'search',
+      {path: 'search',
       loadChildren:() => import('./search/search.module').then(m => m.SearchModule)  },
-     {path: 'product',
+      { path: 'product',
      loadChildren:() =>
-        import('./product/product.module').then((m)=> m.ProductModule)  },
+        import('./product/product.module').then((m)=> m.ProductModule) 
+      },
+      {
+        path: 'customer',
+        loadChildren: () =>
+        import('./customer/customer.module').then((m) => m.CustomerModule),
+      },
      {path: '**', component: NotFoundComponent},
 ];
 

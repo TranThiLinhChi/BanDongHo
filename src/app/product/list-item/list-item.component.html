@@ -5,8 +5,8 @@
           <div class="col-12">
               <!-- breadcrumb-list start -->
               <ul class="breadcrumb-list">
-                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                  <li class="breadcrumb-item active">Shop left sidebar</li>
+                  <li class="breadcrumb-item"><a href="index.html">Trang Chủ</a></li>
+                  <li class="breadcrumb-item active">Loại sản phẩm</li>
               </ul>
               <!-- breadcrumb-list end -->
           </div>
@@ -221,7 +221,7 @@
                                               <div class="product-caption">
                                                   <h4 class="product-name"><a [routerLink]="['/product/detail/', item.id]">{{ item.name_pro}}</a></h4>
                                                   <div class="price-box">
-                                                      <span class="new-price">{{item.unit_price }}</span>
+                                                      <span class="new-price">{{item.unit_price |number}}</span>
                                                       <span class="old-price">$49.00</span>
                                                   </div>
                                               </div>
