@@ -43,7 +43,7 @@
                                         <input type="number" class="input-text" min='1' [max]="i.quantity"title="Qty" #inp  name="qtybutton"  (change)="addQty(i,inp.value)" [value]="i.quantity_sale">
                                     </td>
                                     <td class="product-subtotal"><span class="amount">{{i.money |number}}</span></td>
-                                    <td class="plantmore-product-remove"><a (click)="_cart.deleteItem(i.id)"><i class="fa fa-times"></i></a></td>
+                                    <td class="plantmore-product-remove"><a (click)="_cart.deleteItem(i.product_id)"><i class="fa fa-times"></i></a></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -72,7 +72,7 @@
                                     <li>Subtotal <span>$170.00</span></li>
                                     <li>Total <span>{{total |number}}</span></li>
                                 </ul>
-                                <a href="#" class="proceed-checkout-btn">Proceed to checkout</a>
+                                <a routerLink="/customer/checkout" class="proceed-checkout-btn">Proceed to checkout</a>
                             </div>
                         </div>
                     </div>
