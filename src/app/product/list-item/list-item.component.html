@@ -30,127 +30,20 @@
                           <h4 class="title">Product categories</h4>
                           <!-- category-sub-menu start -->
                           <div class="category-sub-menu">
+                           
                               <ul>
-                                  <li class="has-sub"><a href="#">Sports Watches</a>
-                                      <ul>
-                                          <li><a href="#">Watch men (3)</a></li>
-                                          <li><a href="#">Sports Watches (4)</a></li>
-                                          <li><a href="#">Watch Butter (4)</a></li>
-                                      </ul>
+                                <ng-container *ngFor="let i of categories">
+                                  <li class="has-sub"><a [routerLink]="['/product/list-item', i.id]">{{i.name}}</a>
                                   </li>
-                                  <li class="has-sub"><a href="#">Kitchen & Dining</a>
-                                      <ul>
-                                          <li><a href="#">Watch Woman (2)</a></li>
-                                          <li><a href="#">Watch (1)</a></li>
-                                          <li><a href="#">Watch Raisins (1)</a></li>
-                                      </ul>
-                                  </li>
-                                  <li class="has-sub"><a href="#">Casual Watches (12)</a>
-                                      <ul>
-                                          <li><a href="#">Watch Bag (4)</a></li>
-                                          <li><a href="#">Hamburger (4)</a></li>
-                                      </ul>
-                                  </li>
-                                  <li class="has-sub"><a href="#">Dress Watches (8)</a>
-                                      <ul>
-                                          <li><a href="#">Digital Watches</a></li>
-                                          <li><a href="#">Sheep's meat (8)</a></li>
-                                      </ul>
-                                  </li>
-                                  <li class="has-sub"><a href="#">Kitchen & Dining (11)</a>
-                                      <ul>
-                                          <li><a href="#">Digital (8)</a></li>
-                                          <li><a href="#">Digital watch (8)</a></li>
-                                      </ul>
-                                  </li>
-                                  <li class="has-sub"><a href="#">Digital Watches (12)</a>
-                                      <ul>
-                                          <li><a href="#">Digital Man (8)</a></li>
-                                          <li><a href="#">Fusion Watch (8)</a></li>
-                                      </ul>
-                                  </li>
-                                  <li class="has-sub"><a href="#">Crystal Watches (7)</a>
-                                      <ul>
-                                          <li><a href="#">Fusion Watch (8)</a></li>
-                                          <li><a href="#">Sports's meat (8)</a></li>
-                                      </ul>
-                                  </li>
-                                  <li class="has-sub"><a href="#">watch series (0)</a>
-
-                                  </li>
-                                  <li class="has-sub"><a href="#">watch tnt (11)</a>
-                                      <ul>
-                                          <li><a href="#">Sports (8)</a></li>
-                                          <li><a href="#">Sheep's meat (8)</a></li>
-                                      </ul>
-                                  </li>
+                                </ng-container>
                               </ul>
+                            
                           </div>
                           <!-- category-sub-menu end -->
                       </div>
                       <!--sidebar-categores-box end  -->
 
-                      <!-- shop-sidebar start -->
-                      <div class="shop-sidebar mb-30">
-                          <h4 class="title">Filter By Price</h4>
-                          <!-- filter-price-content start -->
-                          <div class="filter-price-content">
-                              <form action="#" method="post">
-                                  <div id="price-slider" class="price-slider"></div>
-                                  <div class="filter-price-wapper">
-
-                                      <a class="add-to-cart-button" href="#">
-                                          <span>FILTER</span>
-                                      </a>
-                                      <div class="filter-price-cont">
-
-                                          <span>Price:</span>
-                                          <div class="input-type">
-                                              <input type="text" id="min-price" readonly="" />
-                                          </div>
-                                          <span>—</span>
-                                          <div class="input-type">
-                                              <input type="text" id="max-price" readonly="" />
-                                          </div>
-                                      </div>
-                                  </div>
-                              </form>
-                          </div>
-                          <!-- filter-price-content end -->
-                      </div>
-                      <!-- shop-sidebar end -->
-
-                      <!-- shop-sidebar start -->
-                      <div class="shop-sidebar mb-30">
-                          <h4 class="title">Filter by Color</h4>
-
-                          <ul class="category-widget-list">
-                              <li><a href="#">Red (1)</a></li>
-                              <li><a href="#">White (1)</a></li>
-                          </ul>
-
-                      </div>
-                      <!-- shop-sidebar end -->
-
-                      <!-- shop-sidebar start -->
-                      <div class="shop-sidebar mb-30">
-                          <h4 class="title">Product tags</h4>
-
-                          <ul class="sidebar-tag">
-                              <li><a href="#">accesories</a></li>
-                              <li><a href="#">blouse</a></li>
-                              <li><a href="#">clothes</a></li>
-                              <li><a href="#">desktop</a></li>
-                              <li><a href="#">digital</a></li>
-                              <li><a href="#">fashion</a></li>
-                              <li><a href="#">women</a></li>
-                              <li><a href="#">men</a></li>
-                              <li><a href="#">laptop</a></li>
-                              <li><a href="#">handbag</a></li>
-                          </ul>
-
-                      </div>
-                      <!-- shop-sidebar end -->
+                      
 
                   </div>
               </div>

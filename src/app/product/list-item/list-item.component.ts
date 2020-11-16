@@ -12,6 +12,7 @@ export class ListItemComponent extends BaseComponent implements OnInit {
   pageSize: any;
   totalItems: any;
   id_type: any;
+  categories: any;
   constructor( injector: Injector) {
     super(injector);
    }
@@ -21,6 +22,13 @@ export class ListItemComponent extends BaseComponent implements OnInit {
     this.pageSize = 5;
     this._route.params.subscribe((params) => {
       this.id_type = params['id'];
+      this._api
+      .get('api/category/get-menu')
+      .takeUntil(this.unsubscribe)
+      .subscribe((res) => {
+        this.categories = res;
+        console.log(this.categories)
+      });
       this._api
         .post('api/product/search', {
           page: this.page,

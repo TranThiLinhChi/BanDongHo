@@ -11,11 +11,17 @@ import { BaseComponent } from './../lib/base-component';
 })
 export class HomeComponent extends BaseComponent implements OnInit {
   list_item: any;
+  sp_new:any;
   constructor(injector: Injector) {
     super(injector);
   }
 
   ngOnInit(): void {
+    Observable.combineLatest(
+      this._api.get('api/product/get-new'),
+    ).takeUntil(this.unsubscribe).subscribe(res => {
+      this.sp_new= res[0];
+    }, err => {});
      Observable.combineLatest(this._api.get('api/product/get-all'))
       .takeUntil(this.unsubscribe)
       .subscribe(
